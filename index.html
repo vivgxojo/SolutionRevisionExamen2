@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Examen 2</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1 class="border border-2">Module d'inscription à la conférence</h1>
+    <h2>Ajouter un participant</h2>
+    <form class="container">
+        <label class="row m-2" for="nom">Nom *</label>
+        <input class="col-4 m-2" id="nom" name="nom" type="text" required>
+        <label class="row m-2" for="etablissement">Établissement *</label>
+        <select class="col-4 m-2" id="etablissement" name="etablissement">
+            <option value="Cégep Outaouais">Cégep Outaouais</option>
+            <option value="Heritage">Heritage</option>
+            <option value="UQO">UQO</option>
+        </select>
+        <label class="row m-2" for="email">Courriel (scolaire) *</label>
+        <input class="col-4 m-2" id="email" name="email" type="email" required>
+        <p id="erreurCourriel" class="d-none alert alert-danger">Le domaine doit correspondre à l'établissement choisi.</p>
+
+        <div class="row">
+            <input class="col-2 m-2" type="submit" value="Soumettre">
+            <input class="col-2 m-2" type="reset" value="Annuler">
+        </div>
+    </form>
+    <h2>Participants ajoutés</h2>
+    <div id="participants" class="container-sm">
+
+    </div>
+</body>
+</html>
