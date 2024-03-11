@@ -6,10 +6,11 @@ class Participant{
     }
 
     toString() {
-        return "<div class='border border-2 col-3 float-start m-4'>" +
-            "<p class='font-weight-bold'>" + this.nom + "</p>" +
-            "<p>" + this.etablissement + "</p></div>";
+        return `<div class='card card-body border-2 col-3 float-start m-4'>
+                    <h5 class='card-title font-weight-bold'>${this.nom}</h5>
+                    <div class='card-text'>${this.etablissement}</div></div>`;
     }
+
 }
 
 $("form").submit(function (event){
